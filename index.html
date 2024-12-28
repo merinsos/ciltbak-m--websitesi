@@ -63,6 +63,24 @@
         <ul id="brand-list"></ul>
     </section>
 
+    <!-- Geri Bildirim Formu -->
+    <section id="feedback-section">
+        <h2>Geri Bildirim</h2>
+        <form id="feedback-form">
+            <label for="feedback-name">Adınız (İsteğe bağlı):</label>
+            <input type="text" id="feedback-name" name="name">
+            
+            <label for="feedback-email">E-posta (İsteğe bağlı):</label>
+            <input type="email" id="feedback-email" name="email">
+            
+            <label for="feedback-message">Yorum veya önerileriniz:</label>
+            <textarea id="feedback-message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Gönder</button>
+        </form>
+        <p id="feedback-success" style="color: green; display: none;">Teşekkür ederiz! Geri bildiriminiz alındı.</p>
+    </section>
+
     <footer>
         <p>Kaynaklar: <a href="https://www.dermatologytimes.com/">Dermatology Times</a>, <a href="https://www.crueltyfreeinternational.org/">Cruelty-Free International</a></p>
     </footer>
