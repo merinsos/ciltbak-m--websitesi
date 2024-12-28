@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #F4C6C2; /* Toz Pembe */
+    background: linear-gradient(to bottom right, #FFD700, #F4C6C2); /* Altın sarısı ve toz pembe renk geçişi */
     color: #333;
     padding: 20px;
     line-height: 1.6;
@@ -33,6 +33,10 @@ h2 {
 
 section {
     margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.8); /* Hafif beyaz arka plan */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 form {
@@ -48,7 +52,7 @@ label {
     color: #333;
 }
 
-input[type="number"], input[type="radio"] {
+input[type="radio"], input[type="number"] {
     margin-right: 10px;
 }
 
@@ -155,4 +159,14 @@ h1, h2 {
         width: 100%;
         padding: 12px;
     }
+}
+background: linear-gradient(to bottom right, #FFD700, #F4C6C2);
+background: rgba(255, 255, 255, 0.8);
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+button:hover {
+    background-color: #E0B800;
+}
+footer a:hover {
+    text-decoration: underline;
 }
