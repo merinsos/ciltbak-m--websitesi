@@ -1,3 +1,4 @@
+/* Genel Ayarlar */
 * {
     margin: 0;
     padding: 0;
@@ -9,19 +10,24 @@ body {
     background-color: #F4C6C2; /* Toz Pembe */
     color: #333;
     padding: 20px;
+    line-height: 1.6;
 }
 
 header {
+    background-color: #FFD700; /* Altın Sarısı */
+    color: white;
+    padding: 20px 0;
     text-align: center;
-    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #FFD700; /* Altın Sarısı */
+    font-size: 2.5em;
 }
 
 h2 {
-    color: #FFD700;
+    color: #FFD700; /* Altın Sarısı */
     margin-bottom: 20px;
 }
 
@@ -33,33 +39,67 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
 }
 
 label {
     margin: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+input[type="number"], input[type="radio"] {
+    margin-right: 10px;
 }
 
 button {
-    background-color: #FFD700;
+    background-color: #FFD700; /* Altın Sarısı */
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
     background-color: #E0B800;
 }
 
+button:focus {
+    outline: none;
+}
+
+section#skin-type-questions, section#skin-care-routine {
+    display: none;
+}
+
+/* Bakım önerisi kısmı */
+#routine-output {
+    background-color: #FFF9E6; /* Hafif krem tonunda bir arka plan */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
 footer {
     text-align: center;
     margin-top: 40px;
+    font-size: 0.9em;
+    color: #333;
 }
 
-a {
-    color: #FFD700;
+footer a {
+    color: #FFD700; /* Altın Sarısı */
     text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 ul {
@@ -68,5 +108,51 @@ ul {
 }
 
 ul li {
-    margin: 10px 0;
+    background-color: #FFF9E6;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul li:hover {
+    background-color: #FFD700;
+    color: white;
+}
+
+/* Form öğelerine özel vurgulamalar */
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Başlıklar ve metin için görsel iyileştirmeler */
+h1, h2 {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+/* İleriye dönük mobil uyum */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
 }
