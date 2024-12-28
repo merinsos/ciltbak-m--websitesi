@@ -11,29 +11,69 @@ body {
     color: #333;
     padding: 20px;
     line-height: 1.6;
+    overflow: auto;
+}
+
+/* Yıldız Efekti */
+#stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999; /* Daha yüksek bir z-index değeri */
+}
+
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: #FFD700; /* Beyaz renk */
+    border-radius: 50%;
+    animation: fall 3s linear infinite;
+    opacity: 0.8;
+}
+
+
+
+@keyframes fall {
+    0% {
+        top: -5px; /* Başlangıçta yıldızları biraz daha yukarıda başlatıyoruz */
+        opacity: 0.8;
+    }
+    100% {
+        top: 100vh; /* Ekranın alt kısmına kadar hareket */
+        opacity: 0.2;
+    }
 }
 
 header {
-    background-color: #FFD700; /* Altın Sarısı */
+   
     color: white;
     padding: 20px 0;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
+/* Diğer stiller (özelleştirilmiş alanlar) */
 h1 {
     font-size: 2.5em;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
 }
 
 h2 {
-    color: #FFD700; /* Altın Sarısı */
+    color: #FFD700;
     margin-bottom: 20px;
 }
 
 section {
     margin-bottom: 40px;
-    background: rgba(255, 255, 255, 0.8); /* Hafif beyaz arka plan */
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -57,7 +97,7 @@ input[type="radio"], input[type="number"] {
 }
 
 button {
-    background-color: #FFD700; /* Altın Sarısı */
+    background-color: #FFD700;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -77,13 +117,8 @@ button:focus {
     outline: none;
 }
 
-section#skin-type-questions, section#skin-care-routine {
-    display: none;
-}
-
-/* Bakım önerisi kısmı */
 #routine-output {
-    background-color: #FFF9E6; /* Hafif krem tonunda bir arka plan */
+    background-color: #FFF9E6;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -98,7 +133,7 @@ footer {
 }
 
 footer a {
-    color: #FFD700; /* Altın Sarısı */
+    color: #FFD700;
     text-decoration: none;
 }
 
@@ -124,7 +159,6 @@ ul li:hover {
     color: white;
 }
 
-/* Form öğelerine özel vurgulamalar */
 input[type="radio"] {
     width: 20px;
     height: 20px;
@@ -139,37 +173,6 @@ input[type="number"] {
     font-size: 1em;
 }
 
-/* Başlıklar ve metin için görsel iyileştirmeler */
-h1, h2 {
-    font-family: 'Georgia', serif;
-    font-weight: bold;
-}
-
-/* İleriye dönük mobil uyum */
-@media screen and (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    button {
-        width: 100%;
-        padding: 12px;
-    }
-}
-background: linear-gradient(to bottom right, #FFD700, #F4C6C2);
-background: rgba(255, 255, 255, 0.8);
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-border-radius: 8px;
-button:hover {
-    background-color: #E0B800;
-}
-footer a:hover {
-    text-decoration: underline;
-}
 /* Geri Bildirim Formu */
 #feedback-section {
     margin-top: 50px;
@@ -181,7 +184,7 @@ footer a:hover {
 
 #feedback-section h2 {
     font-size: 1.8em;
-    color: #FFD700; /* Altın Sarısı */
+    color: #FFD700;
 }
 
 #feedback-form {
@@ -209,7 +212,7 @@ footer a:hover {
 }
 
 #feedback-form button {
-    background-color: #FFD700; /* Altın Sarısı */
+    background-color: #FFD700;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -226,4 +229,5 @@ footer a:hover {
 #feedback-success {
     margin-top: 20px;
     font-size: 1.2em;
+    color: green;
 }
