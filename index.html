@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cilt Tipine Uygun Bakım Rutini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cilt Tipine Uygun Bakım Rutini</h1>
+        <p>Sağlıklı bir cilt için doğru bakım rutini oluşturun.</p>
+    </header>
+    
+    <section id="age-check">
+        <h2>Yaşınızı Girin</h2>
+        <form id="age-form">
+            <label for="age">Yaşınızı Girin:</label>
+            <input type="number" id="age" name="age" min="18" required>
+            <button type="submit">Devam Et</button>
+        </form>
+    </section>
+
+    <section id="skin-type-questions" style="display:none;">
+        <h2>Cilt Tipinizi Öğrenin</h2>
+        <form id="skin-form">
+            <p>Yüzünüzde genellikle hangi hissi duyarsınız?</p>
+            <label><input type="radio" name="skinFeel" value="dry"> Kuruluk</label>
+            <label><input type="radio" name="skinFeel" value="oily"> Yağlılık</label>
+            <label><input type="radio" name="skinFeel" value="normal"> Normal</label>
+            
+            <p>Cildinizde sıklıkla sivilce ya da akne olur mu?</p>
+            <label><input type="radio" name="skinAcne" value="yes"> Evet</label>
+            <label><input type="radio" name="skinAcne" value="no"> Hayır</label>
+
+            <button type="submit">Sonuçları Göster</button>
+        </form>
+    </section>
+
+    <section id="skin-care-routine" style="display:none;">
+        <h2>Cilt Tipinize Uygun Bakım Rutini</h2>
+        <div id="routine-output"></div>
+        <p>Cruelty-Free ve Dermatolog Onaylı Markalar:</p>
+        <ul id="brand-list"></ul>
+    </section>
+
+    <footer>
+        <p>Kaynaklar: <a href="https://www.dermatologytimes.com/">Dermatology Times</a>, <a href="https://www.crueltyfreeinternational.org/">Cruelty-Free International</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
