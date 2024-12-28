@@ -52,3 +52,20 @@ document.getElementById("skin-form").addEventListener("submit", function(event) 
     document.getElementById("skin-type-questions").style.display = "none";
     document.getElementById("skin-care-routine").style.display = "block";
 });
+// Geri bildirim formunun gönderilmesi
+document.getElementById("feedback-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Kullanıcıdan gelen bilgileri alalım
+    const name = document.getElementById("feedback-name").value;
+    const email = document.getElementById("feedback-email").value;
+    const message = document.getElementById("feedback-message").value;
+
+    // Bilgiler başarılı şekilde alındıysa, teşekkür mesajını gösterelim
+    if (message.trim() !== "") {
+        document.getElementById("feedback-form").reset();  // Formu sıfırlıyoruz
+        document.getElementById("feedback-success").style.display = "block"; // Başarı mesajını gösteriyoruz
+    } else {
+        alert("Lütfen geri bildiriminizi yazınız.");
+    }
+});
