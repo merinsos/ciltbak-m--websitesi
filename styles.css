@@ -170,3 +170,60 @@ button:hover {
 footer a:hover {
     text-decoration: underline;
 }
+/* Geri Bildirim Formu */
+#feedback-section {
+    margin-top: 50px;
+    background-color: #FFF9E6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#feedback-section h2 {
+    font-size: 1.8em;
+    color: #FFD700; /* Altın Sarısı */
+}
+
+#feedback-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#feedback-form label {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+#feedback-form input, #feedback-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#feedback-form textarea {
+    resize: vertical;
+}
+
+#feedback-form button {
+    background-color: #FFD700; /* Altın Sarısı */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#feedback-form button:hover {
+    background-color: #E0B800;
+}
+
+#feedback-success {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
